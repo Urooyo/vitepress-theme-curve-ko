@@ -9,7 +9,7 @@
       >
         {{ currentTypeName }}
       </a>
-      <a href="/" :class="['type-item', { choose: !currentTypeName }]">首页</a>
+      <a href="/" :class="['type-item', { choose: !currentTypeName }]">홈</a>
       <a
         v-for="(_, key, index) in theme.categoriesData"
         :key="index"
@@ -21,7 +21,7 @@
     </div>
     <a href="/pages/categories" class="more-type">
       <i class="iconfont icon-arrow-right" />
-      更多
+      더 보기
     </a>
   </div>
   <div v-else-if="type === 'tags'" class="type-bar s-card hover">
@@ -42,7 +42,7 @@
     </div>
     <a href="/pages/tags" class="more-type">
       <i class="iconfont icon-arrow-right" />
-      更多
+      더 보기
     </a>
   </div>
 </template>

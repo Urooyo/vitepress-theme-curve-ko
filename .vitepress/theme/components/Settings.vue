@@ -3,12 +3,12 @@
   <div class="settings">
     <div class="set-btn s-card" @click="store.changeShowStatus('showSeetings')">
       <i class="iconfont icon-style"></i>
-      <span class="set-text">个性化配置</span>
+      <span class="set-text">개인화 설정</span>
     </div>
     <!-- 设置面板 -->
     <Modal
       :show="store.showSeetings"
-      title="个性化配置"
+      title="개인화 설정"
       titleIcon="style"
       @mask-click="store.changeShowStatus('showSeetings')"
       @modal-close="store.changeShowStatus('showSeetings')"
@@ -16,7 +16,7 @@
       <div class="set-list">
         <span class="title">字体</span>
         <div class="set-item">
-          <span class="set-label">全站字体</span>
+          <span class="set-label">전체 글꼴</span>
           <div class="set-options">
             <span
               :class="['options', { choose: fontFamily === 'hmos' }]"
@@ -33,39 +33,39 @@
           </div>
         </div>
         <div class="set-item">
-          <span class="set-label">全站字体大小</span>
+          <span class="set-label">전체 글꼴 크기</span>
           <div class="set-options">
             <span class="options" @click="store.changeFontSize(false)"> - </span>
             <span class="num">{{ fontSize }}</span>
             <span class="options" @click="store.changeFontSize(true)"> + </span>
           </div>
         </div>
-        <span class="title">壁纸个性化</span>
+        <span class="title">배경 개인화</span>
         <div class="set-item">
-          <span class="set-label">全站背景</span>
+          <span class="set-label">전체 배경</span>
           <div class="set-options">
             <span
               :class="['options', { choose: backgroundType === 'close' }]"
               @click="backgroundType = 'close'"
             >
-              关闭
+              닫기
             </span>
             <span
               :class="['options', { choose: backgroundType === 'patterns' }]"
               @click="backgroundType = 'patterns'"
             >
-              纹理
+              패턴
             </span>
             <span
               :class="['options', { choose: backgroundType === 'image' }]"
               @click="(backgroundType = 'image'), (themeType = 'dark')"
             >
-              图片
+              이미지
             </span>
           </div>
         </div>
         <div v-if="backgroundType === 'image'" class="set-item">
-          <span class="set-label">背景图片地址</span>
+          <span class="set-label">배경 이미지 주소</span>
           <div class="set-options">
             <input
               v-model="backgroundUrl"
@@ -76,9 +76,9 @@
             />
           </div>
         </div>
-        <span class="title">首页样式</span>
+        <span class="title">홈 스타일</span>
         <div class="set-item">
-          <span class="set-label">Banner 高度</span>
+          <span class="set-label">배너 높이</span>
           <div class="set-options">
             <span
               :class="['options', { choose: bannerType === 'half' }]"
@@ -94,21 +94,21 @@
             </span>
           </div>
         </div>
-        <span class="title">杂项调整</span>
+        <span class="title">기타 조정</span>
         <div class="set-item">
-          <span class="set-label">额外信息显示位置</span>
+          <span class="set-label">추가 정보 표시 위치</span>
           <div class="set-options">
             <span
               :class="['options', { choose: infoPosition === 'normal' }]"
               @click="infoPosition = 'normal'"
             >
-              默认位置
+              기본 위치
             </span>
             <span
               :class="['options', { choose: infoPosition === 'fixed' }]"
               @click="infoPosition = 'fixed'"
             >
-              右下角
+              오른쪽 아래
             </span>
           </div>
         </div>

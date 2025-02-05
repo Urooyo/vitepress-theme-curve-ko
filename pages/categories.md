@@ -1,5 +1,5 @@
 ---
-title: 全部分类
+title: 모든 카테고리
 aside: false
 ---
 

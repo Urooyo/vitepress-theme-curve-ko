@@ -1,5 +1,5 @@
 ---
-title: 正在重定向
+title: 리디렉션 중
 ---
 
 <script setup>

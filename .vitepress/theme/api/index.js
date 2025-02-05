@@ -20,15 +20,15 @@ export const getSiteInfo = async (url) => {
     description: null,
   };
   try {
-    // 站点数据
+    // 사이트 데이터
     const response = await fetch(url);
     const text = await response.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(text, "text/html");
-    // 获取页面标题
+    // 페이지 제목 가져오기
     const titleElement = doc.querySelector("title");
-    details.title = titleElement ? titleElement.textContent : "暂无标题";
-    // 获取 icon
+    details.title = titleElement ? titleElement.textContent : "무명소졸";
+    // 아이콘 가져오기
     let iconLink =
       doc.querySelector("link[rel='shortcut icon']") || doc.querySelector("link[rel='icon']");
     if (iconLink) {
@@ -36,21 +36,21 @@ export const getSiteInfo = async (url) => {
     } else {
       details.iconUrl = new URL("/favicon.ico", url).href;
     }
-    // 获取描述
+    // 설명 가져오기
     const metaDescription = doc.querySelector("meta[name='description']");
     details.description = metaDescription ? metaDescription.content : "暂无站点描述";
   } catch (error) {
-    console.error("获取站点信息失败：", error);
+    console.error("사이트 정보 가져오기 실패：", error);
   }
   return details;
 };
 
 /**
  * Meting
- * @param {id} string - 歌曲ID
- * @param {server} string - 服务器
- * @param {type} string - 类型
- * @returns {Promise<Object>} - 音乐详情
+ * @param {id} string - 음악 ID
+ * @param {server} string - 서버
+ * @param {type} string - 유형
+ * @returns {Promise<Object>} - 음악 세부 정보
  */
 export const getMusicList = async (url, id, server = "netease", type = "playlist") => {
   const result = await fetch(`${url}?server=${server}&type=${type}&id=${id}`);
@@ -70,13 +70,13 @@ export const getMusicList = async (url, id, server = "netease", type = "playlist
 export const getStatistics = async (key) => {
   const result = await fetch(`https://v6-widget.51.la/v6/${key}/quote.js`);
   const title = [
-    "最近活跃",
-    "今日人数",
-    "今日访问",
-    "昨日人数",
-    "昨日访问",
-    "本月访问",
-    "总访问量",
+    "최근 활동",
+    "오늘 방문자",
+    "오늘 방문",
+    "어제 방문자",
+    "어제 방문",
+    "이번 달 방문",
+    "총 방문",
   ];
   const data = await result.text();
   let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);

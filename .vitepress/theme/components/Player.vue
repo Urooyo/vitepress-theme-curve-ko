@@ -27,7 +27,7 @@ const getMusicListData = async () => {
     console.log(musicList);
     initAPlayer(musicList?.length ? musicList : []);
   } catch (error) {
-    $message.error("获取播放列表失败，请重试");
+    $message.error("재생 목록 가져오기 실패, 다시 시도해주세요:");
     initAPlayer([]);
   }
 };
@@ -47,25 +47,25 @@ const initAPlayer = async (list) => {
       order: "random",
       audio: playlist,
     });
-    console.info("🎵 播放器挂载完成", player.value);
-    // 播放器事件
+    console.info("🎵 재생기 마운트 완료", player.value);
+    // 재생기 이벤트
     player.value?.on("canplay", () => {
-      // 更新信息
+      // 업데이트 정보
       getMusicData();
     });
     player.value?.on("play", () => {
-      console.log("开始播放");
+      console.log("재생 시작");
       playState.value = true;
     });
     player.value?.on("pause", () => {
-      console.log("暂停播放");
+      console.log("일시정지");
       playState.value = false;
     });
     getMusicData();
-    // 挂载播放器
+    // 재생기 마운트
     window.$player = player.value;
   } catch (error) {
-    console.error("初始化播放器出错：", error);
+    console.error("재생기 초기화 오류:", error);
   }
 };
 
@@ -78,15 +78,15 @@ const getMusicData = () => {
     const songName = songInfo.querySelector(".aplayer-title").innerText;
     const songArtist = songInfo.querySelector(".aplayer-author").innerText.replace(" - ", "");
     console.log(songName, songArtist);
-    // 更新信息
+    // 업데이트 정보
     playerData.value = {
-      name: songName || "未知曲目",
-      artist: songArtist || "未知艺术家",
+      name: songName || "알 수 없는 곡",
+      artist: songArtist || "알 수 없는 아티스트",
     };
     // 更新媒体信息
     initMediaSession(playerData.value?.name, playerData.value?.artist);
   } catch (error) {
-    console.error("获取播放信息出错：", error);
+    console.error("재생 정보 가져오기 오류:", error);
   }
 };
 

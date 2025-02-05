@@ -13,10 +13,10 @@
     @click="router.go(nextPostData?.regularPath)"
   >
     <span class="post-tip">
-      {{ isNextPost ? "下一篇阅读" : "阅读上一篇" }}
+      {{ isNextPost ? "다음 글 읽기" : "이전 글 읽기" }}
     </span>
     <span class="post-title">
-      {{ nextPostData?.title || "暂无标题" }}
+      {{ nextPostData?.title || "제목 없음" }}
     </span>
   </div>
 </template>

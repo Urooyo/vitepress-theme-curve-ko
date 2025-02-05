@@ -18,7 +18,7 @@ export default {
     for (let pageNum = 2; pageNum <= totalPages; pageNum += 1) {
       pages.push({ params: { num: pageNum.toString() } });
     }
-    console.info("文章分页动态路由：", pages);
+    console.info("페이지 분할 동적 라우팅：", pages);
     return pages;
   },
 };

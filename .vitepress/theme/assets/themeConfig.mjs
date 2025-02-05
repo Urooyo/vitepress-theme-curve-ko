@@ -9,9 +9,9 @@ export const themeConfig = {
     // 站点logo
     logo: "/images/logo/logo.webp",
     // 站点地址
-    site: "https://blog.imsyy.top",
+    site: "https://blog.purclo.net",
     // 语言
-    lang: "zh-CN",
+    lang: "ko-KR",
     // 作者
     author: {
       name: "Admin",
@@ -111,41 +111,41 @@ export const themeConfig = {
   // 导航栏菜单
   nav: [
     {
-      text: "文库",
+      text: "문서",
       items: [
-        { text: "文章列表", link: "/pages/archives", icon: "article" },
-        { text: "全部分类", link: "/pages/categories", icon: "folder" },
-        { text: "全部标签", link: "/pages/tags", icon: "hashtag" },
+        { text: "모든 게시물", link: "/pages/archives", icon: "article" },
+        { text: "모든 분류", link: "/pages/categories", icon: "folder" },
+        { text: "모든 태그", link: "/pages/tags", icon: "hashtag" },
       ],
     },
     {
-      text: "专栏",
+      text: "전문",
       items: [
-        { text: "技术分享", link: "/pages/categories/技术分享", icon: "technical" },
-        { text: "我的项目", link: "/pages/project", icon: "code" },
-        { text: "效率工具", link: "/pages/tools", icon: "tools" },
+        { text: "기술 공유", link: "/pages/categories/기술 공유", icon: "technical" },
+        { text: "내 프로젝트", link: "/pages/project", icon: "code" },
+        { text: "효율 도구", link: "/pages/tools", icon: "tools" },
       ],
     },
     {
       text: "友链",
       items: [
-        { text: "友链鱼塘", link: "/pages/friends", icon: "fish" },
-        { text: "友情链接", link: "/pages/link", icon: "people" },
+        { text: "친구 망", link: "/pages/friends", icon: "fish" },
+        { text: "친구 링크", link: "/pages/link", icon: "people" },
       ],
     },
     {
-      text: "我的",
+      text: "내 것",
       items: [
-        { text: "畅所欲言", link: "/pages/message", icon: "chat" },
-        { text: "致谢名单", link: "/pages/thanks", icon: "reward" },
-        { text: "关于本站", link: "/pages/about", icon: "contacts" },
+        { text: "말하고 싶은 것", link: "/pages/message", icon: "chat" },
+        { text: "감사 명단", link: "/pages/thanks", icon: "reward" },
+        { text: "이 사이트에 대해", link: "/pages/about", icon: "contacts" },
       ],
     },
   ],
   // 导航栏菜单 - 左侧
   navMore: [
     {
-      name: "博客",
+      name: "블로그",
       list: [
         {
           icon: "/images/logo/logo.webp",
@@ -154,33 +154,33 @@ export const themeConfig = {
         },
         {
           icon: "/images/logo/logo.webp",
-          name: "博客镜像站",
+          name: "블로그 백업 사이트",
           url: "https://blog-backup.imsyy.top/",
         },
       ],
     },
     {
-      name: "服务",
+      name: "서비스",
       list: [
         {
           icon: "https://pic.efefee.cn/uploads/2024/04/08/6613465358077.png",
-          name: "起始页",
+          name: "시작 페이지",
           url: "https://nav.imsyy.top/",
         },
         {
           icon: "https://pic.efefee.cn/uploads/2024/04/08/661346d418ad7.png",
-          name: "今日热榜",
+          name: "오늘의 인기 목록",
           url: "https://hot.imsyy.top/",
         },
         {
           icon: "https://pic.efefee.cn/uploads/2024/04/08/66134722586fa.png",
-          name: "站点监测",
+          name: "사이트 모니터링",
           url: "https://status.imsyy.top/",
         },
       ],
     },
     {
-      name: "项目",
+      name: "프로젝트",
       list: [
         {
           icon: "/images/logo/logo.webp",
@@ -265,16 +265,16 @@ export const themeConfig = {
     // sitemap
     sitemap: [
       {
-        text: "博客",
+        text: "블로그",
         items: [
-          { text: "近期文章", link: "/" },
-          { text: "全部分类", link: "/pages/categories" },
-          { text: "全部标签", link: "/pages/tags" },
-          { text: "文章归档", link: "/pages/archives", newTab: true },
+          { text: "최근 게시물", link: "/" },
+          { text: "모든 분류", link: "/pages/categories" },
+          { text: "모든 태그", link: "/pages/tags" },
+          { text: "게시물 보관함", link: "/pages/archives", newTab: true },
         ],
       },
       {
-        text: "项目",
+        text: "프로젝트",
         items: [
           { text: "Home", link: "https://github.com/imsyy/home/", newTab: true },
           { text: "SPlayer", link: "https://github.com/imsyy/SPlayer/", newTab: true },
@@ -283,30 +283,30 @@ export const themeConfig = {
         ],
       },
       {
-        text: "专栏",
+        text: "전문",
         items: [
-          { text: "技术分享", link: "/pages/categories/技术分享" },
-          { text: "我的项目", link: "/pages/project" },
-          { text: "效率工具", link: "/pages/tools" },
+          { text: "기술 공유", link: "/pages/categories/기술 공유" },
+          { text: "내 프로젝트", link: "/pages/project" },
+          { text: "효율 도구", link: "/pages/tools" },
         ],
       },
       {
-        text: "页面",
+        text: "페이지",
         items: [
-          { text: "畅所欲言", link: "/pages/message" },
-          { text: "关于本站", link: "/pages/about" },
-          { text: "隐私政策", link: "/pages/privacy" },
-          { text: "版权协议", link: "/pages/cc" },
+          { text: "말하고 싶은 것", link: "/pages/message" },
+          { text: "이 사이트에 대해", link: "/pages/about" },
+          { text: "개인정보 처리 방침", link: "/pages/privacy" },
+          { text: "저작권 협약", link: "/pages/cc" },
         ],
       },
       {
-        text: "服务",
+        text: "서비스",
         items: [
-          { text: "站点状态", link: "https://status.imsyy.top/", newTab: true },
-          { text: "一个导航", link: "https://nav.imsyy.top/", newTab: true },
-          { text: "站点订阅", link: "https://blog.imsyy.top/rss.xml", newTab: true },
+          { text: "사이트 상태", link: "https://status.imsyy.top/", newTab: true },
+          { text: "하나의 내비게이션", link: "https://nav.imsyy.top/", newTab: true },
+          { text: "사이트 구독", link: "https://blog.imsyy.top/rss.xml", newTab: true },
           {
-            text: "反馈投诉",
+            text: "피드백 및 신고",
             link: "https://eqnxweimkr5.feishu.cn/share/base/form/shrcnCXCPmxCKKJYI3RKUfefJre",
             newTab: true,
           },
@@ -342,7 +342,7 @@ export const themeConfig = {
     // 站点简介
     hello: {
       enable: true,
-      text: "这里有关于<strong>开发</strong>相关的问题和看法，也会有一些<strong>奇技淫巧</strong>的分享，其中大部分内容会侧重于<strong>前端开发</strong>。希望你可以在这里找到对你有用的知识和教程。",
+      text: "여기에는 개발 관련 질문과 의견이 있으며, 대부분 <strong>프론트엔드 개발</strong>에 중점을 둡니다. 여러분이 유용한 지식과 튜토리얼을 찾을 수 있기를 바랍니다.",
     },
     // 目录
     toc: {
@@ -357,7 +357,7 @@ export const themeConfig = {
       enable: true,
       // 倒计时日期
       data: {
-        name: "春节",
+        name: "추석",
         date: "2025-01-29",
       },
     },

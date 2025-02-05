@@ -60,12 +60,12 @@ const props = defineProps({
   // 标题
   title: {
     type: String,
-    default: "这里是标题",
+    default: "제목 없음",
   },
   // 简介
   desc: {
     type: String,
-    default: "这里是简介",
+    default: "제목 없음",
   },
   // 注释
   footer: {
@@ -92,8 +92,8 @@ const getHitokotoData = async () => {
     const { hitokoto, from, from_who } = result;
     hitokotoData.value = { hitokoto, from, from_who };
   } catch (error) {
-    $message.error("一言获取失败");
-    console.error("一言获取失败：", error);
+    $message.error("한 어 가져오기 실패");
+    console.error("한 어 가져오기 실패：", error);
   }
 };
 

@@ -3,7 +3,7 @@
     <Transition name="fade" mode="out-in">
       <div v-if="loadingStatus" class="loading" @click="loadingStatus = false">
         <img :src="theme.siteMeta.logo" class="logo" alt="loading-logo" />
-        <span :class="['tip', { show: showTip }]"> 一直显示？点击任意区域即可关闭 </span>
+        <span :class="['tip', { show: showTip }]"> 계속 표시? 임의 영역을 클릭하여 닫으세요 </span>
       </div>
     </Transition>
   </Teleport>

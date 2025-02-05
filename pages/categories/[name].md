@@ -1,5 +1,5 @@
 ---
-title: 分类
+title: 카테고리
 aside: false
 padding: false
 ---
@@ -12,7 +12,7 @@ import Home from "@/views/Home.vue"
 const { params, site } = useData();
 
 onMounted(() => {
-  document.title = `分类：${params.value.name} | ${site.value.title}`;
+  document.title = `카테고리：${params.value.name} | ${site.value.title}`;
 });
 </script>
 

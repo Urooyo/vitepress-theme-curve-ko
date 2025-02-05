@@ -1,5 +1,5 @@
 ---
-title: 关于本站
+title: 사이트 소개
 aside: false
 ---
 

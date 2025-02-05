@@ -25,11 +25,11 @@
           <span class="name">VitePress</span>
         </a>
         <a class="theme link" href="https://github.com/imsyy/vitepress-theme-curve" target="_blank">
-          <span class="name">主题</span>
+          <span class="name">테마</span>
         </a>
         <a class="rss link" href="https://blog.imsyy.top/rss.xml" target="_blank">
           <i class="iconfont icon-rss" />
-          <span class="name">订阅</span>
+          <span class="name">구독</span>
         </a>
         <a
           class="cc link"

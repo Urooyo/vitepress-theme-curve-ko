@@ -1,26 +1,26 @@
 <template>
   <div class="copyright s-card">
     <div class="title">
-      <span class="post-name">{{ postData?.title || "未命名文章" }}</span>
+      <span class="post-name">{{ postData?.title || "무명 글" }}</span>
       <a :href="theme.siteMeta.site + route.path" class="post-link" target="_blank">
         {{ theme.siteMeta.site + route.path }}
       </a>
     </div>
     <div class="post-meta">
       <div class="meta-item">
-        <span class="tip">作者</span>
+        <span class="tip">작성자</span>
         <span class="name">{{ theme.siteMeta.author.name }}</span>
       </div>
       <div class="meta-item">
-        <span class="tip">发布于</span>
+        <span class="tip">게시됨</span>
         <span class="name">{{ formatTimestamp(postData?.date) }}</span>
       </div>
       <div class="meta-item">
-        <span class="tip">更新于</span>
+        <span class="tip">업데이트됨</span>
         <span class="name">{{ formatTimestamp(postData?.lastModified) }}</span>
       </div>
       <div class="meta-item cc">
-        <span class="tip">许可协议</span>
+        <span class="tip">허가 협약</span>
         <a
           class="name"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"
@@ -30,7 +30,7 @@
         </a>
       </div>
     </div>
-    <span class="meta-tip">署名-非商业性使用-相同方式共享 4.0 国际</span>
+    <span class="meta-tip">명시-비영리-동일 조건 공유 4.0 국제</span>
   </div>
 </template>
 

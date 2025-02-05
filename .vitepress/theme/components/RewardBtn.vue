@@ -3,39 +3,39 @@
   <div v-if="rewardData.enable" class="reward">
     <div class="reward-btn" @click="rewardShow = true">
       <i class="iconfont icon-reward" />
-      <span class="text">赞赏博主</span>
+      <span class="text">작가에게 선물하기</span>
     </div>
-    <!-- 设置面板 -->
+    <!-- 설정 패널 -->
     <Modal
       :show="rewardShow"
       :maxWidth="430"
-      title="赞赏博主"
+      title="작가에게 선물하기"
       titleIcon="reward"
       @mask-click="rewardShow = false"
       @modal-close="rewardShow = false"
     >
       <div class="reward-card">
-        <span class="thank">🙏 感谢您赐予我前进的力量</span>
+        <span class="thank">🙏 당신의 선물로 저를 위한 힘을 주셨습니다</span>
         <div class="qr">
           <a v-if="rewardData?.wechat" :href="rewardData.wechat" class="qr-img" target="_blank">
-            <img v-if="rewardData?.wechat" :src="rewardData.wechat" alt="微信" />
+            <img v-if="rewardData?.wechat" :src="rewardData.wechat" alt="위챗" />
             <span class="tip">
               <i class="iconfont icon-wechat-pay" />
-              微信
+              위챗
             </span>
           </a>
           <a v-if="rewardData?.alipay" :href="rewardData.alipay" class="qr-img" target="_blank">
-            <img v-if="rewardData?.alipay" :src="rewardData.alipay" alt="支付宝" />
+            <img v-if="rewardData?.alipay" :src="rewardData.alipay" alt="알리페이" />
             <span class="tip">
               <i class="iconfont icon-alipay" />
-              支付宝
+              알리페이
             </span>
           </a>
         </div>
         <div v-if="showJump" class="all-list s-card hover" @click="toRewardList">
-          <span class="title">全部赞赏者名单</span>
+          <span class="title">모든 선물자 목록</span>
           <span class="tip">
-            赞赏金额将全部用于开源项目维护，以及服务器、域名及各类云服务的开销
+            선물 금액은 오픈 소스 프로젝트 유지 및 서버, 도메인 및 각종 클라우드 서비스 비용에 사용됩니다
           </span>
         </div>
       </div>

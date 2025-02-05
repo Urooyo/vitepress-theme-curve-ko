@@ -18,21 +18,21 @@
             </div>
             <div
               :class="['menu-item', { open: store.useRightMenu }]"
-              title="右键菜单开关"
+              title="오른쪽 클릭 메뉴 스위치"
               @click.stop="rightMenuSwitch"
             >
               <i class="iconfont icon-list"></i>
             </div>
             <div
               :class="['menu-item', { open: store.playerShow }]"
-              title="播放器开关"
+              title="플레이어 스위치"
               @click.stop="store.playerShow = !store.playerShow"
             >
               <i class="iconfont icon-music"></i>
             </div>
             <div
               :class="['menu-item', { open: store.backgroundBlur }]"
-              title="背景模糊开关"
+              title="배경 블러 스위치"
               @click.stop="store.changeShowStatus('backgroundBlur')"
             >
               <i class="iconfont icon-blur"></i>
@@ -67,7 +67,7 @@ const changeCloseStyle = () => {
 // 右键菜单开关
 const rightMenuSwitch = () => {
   store.useRightMenu = !store.useRightMenu;
-  $message.info(`${store.useRightMenu ? "已开启" : "已关闭"}自定义右键菜单`);
+  $message.info(`${store.useRightMenu ? "커스텀 오른쪽 클릭 메뉴가 활성화되었습니다." : "커스텀 오른쪽 클릭 메뉴가 비활성화되었습니다."}`);
 };
 </script>
 

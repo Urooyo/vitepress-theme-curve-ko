@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>安全中心 | 無名小栈</title>
+    <title>안전 센터 | 무명소졸</title>
     <style>
       * {
         margin: 0;
@@ -33,7 +33,7 @@
       body {
         background-color: var(--main-site-background);
         color: var(--main-font-color);
-        font-family: "PingFang SC", "Open Sans", "Microsoft YaHei", sans-serif;
+        font-family: "Wanted Sans Variable", "Wanted Sans", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -153,16 +153,16 @@
         <img src="./images/logo/logo.webp" alt="" />
       </div>
       <div class="title">
-        <span class="site-name">無名小栈</span>
-        <span class="site-tip">安全中心</span>
+        <span class="site-name">무명소졸</span>
+        <span class="site-tip">안전 센터</span>
       </div>
     </header>
     <main>
-      <span class="tip">您即将离开無名小栈，前往</span>
+      <span class="tip">무명소졸에서 떠나 다른 곳으로 가고 있습니다</span>
       <span id="url"></span>
       <div id="jump-content" class="warn">
-        <span id="site-info">⚠️ 该网址安全性未知，请注意您的帐号和财产安全</span>
-        <div id="jump-button">继续前往</div>
+        <span id="site-info">⚠️ 해당 주소의 안전성은 알 수 없습니다. 계정과 재산의 안전에 유의하세요</span>
+        <div id="jump-button">계속 이동</div>
       </div>
     </main>
     <footer>
@@ -171,9 +171,9 @@
         <script>
           document.write(new Date().getFullYear());
         </script>
-        無名小栈
+        무명소졸
       </a>
-      <a class="icp" href="https://beian.miit.gov.cn/" target="_blank"> 豫ICP备2022018134号-1 </a>
+      <a class="icp" href="https://beian.miit.gov.cn/" target="_blank"> 무ICP备2022018134号-1 </a>
     </footer>
     <script>
       // 跳转网址
@@ -197,18 +197,18 @@
       const blacklist = ["*.taobao.com", "*.jd.com"];
       // 提示文本
       const tipText = {
-        safe: "✅ 该网址为信任网址，即将跳转",
-        danger: "⛔ 该网址处于黑名单",
+        safe: "✅ 해당 주소는 신뢰할 수 있는 주소입니다. 이동합니다",
+        danger: "⛔ 해당 주소는 블랙리스트에 있습니다",
       };
       // 自动跳转
       const autoJump = () => {
         let count = 3;
         const updateContent = () => {
-          jumpButton.innerHTML = `${count} 秒后自动跳转`;
+          jumpButton.innerHTML = `${count} 초 후 자동 이동`;
           count--;
           if (count < 0) {
             clearInterval(interval);
-            jumpButton.innerHTML = "正在跳转";
+            jumpButton.innerHTML = "이동 중";
             window.location.replace(jumpLink);
           }
         };
@@ -233,7 +233,7 @@
             if (urlHostname.match(blackPattern)) {
               // 显示提示信息
               urlTip.innerHTML = tipText.danger;
-              jumpButton.innerHTML = "禁止跳转";
+              jumpButton.innerHTML = "이동 금지";
               jumpButton.style.cursor = "not-allowed";
               jumpButton.style.pointerEvents = "none";
               jumpButton.style.opacity = "0.4";
@@ -255,7 +255,7 @@
         } catch (error) {
           console.error(error);
           jumpContent.remove();
-          urlDom.innerHTML = "获取跳转链接失败";
+          urlDom.innerHTML = "이동 링크 가져오기 실패";
         }
       };
       document.addEventListener("contextmenu", function (event) {
@@ -275,7 +275,7 @@
       });
       jumpButton.addEventListener("click", () => {
         clearInterval(interval);
-        jumpButton.innerHTML = "正在跳转";
+        jumpButton.innerHTML = "이동 중";
         if (jumpLink) window.location.replace(jumpLink);
       });
       window.addEventListener("DOMContentLoaded", () => {

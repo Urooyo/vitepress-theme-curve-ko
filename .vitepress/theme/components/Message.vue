@@ -9,7 +9,7 @@
         @click="closeMessage"
       >
         <div class="message-content">
-          <span class="text">{{ messageContent || "默认消息内容" }}</span>
+          <span class="text">{{ messageContent || "기본 메시지 내용" }}</span>
           <span v-if="messageClose" class="close">
             <i class="iconfont icon-close"></i>
           </span>

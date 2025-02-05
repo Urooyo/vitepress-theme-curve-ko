@@ -2,7 +2,7 @@
 <template>
   <Modal
     :show="store.searchShow"
-    title="全局搜索"
+    title="전역 검색"
     titleIcon="search"
     @mask-click="store.changeShowStatus('searchShow')"
     @modal-close="store.changeShowStatus('searchShow')"
@@ -16,7 +16,7 @@
       @state-change="searchChange"
     >
       <ais-configure :hits-per-page.camel="8" />
-      <ais-search-box placeholder="想要搜点什么" autofocus />
+      <ais-search-box placeholder="찾고 싶은 것이 있나요?" autofocus />
       <ais-hits v-if="hasSearchValue">
         <template v-slot="{ items }">
           <Transition name="fade" mode="out-in">
@@ -34,7 +34,7 @@
             </div>
             <div v-else class="no-result">
               <i class="iconfont icon-search-empty" />
-              <span class="text">搜索结果为空</span>
+              <span class="text">검색 결과가 없습니다</span>
             </div>
           </Transition>
         </template>
@@ -43,7 +43,7 @@
       <ais-stats>
         <template v-slot="{ processingTimeMS }">
           <div class="information">
-            <span v-if="hasSearchValue" class="text"> 本次用时 {{ processingTimeMS }} 毫秒 </span>
+            <span v-if="hasSearchValue" class="text"> 이 번 시간은 {{ processingTimeMS }} 밀리초 </span>
           </div>
           <a class="power" href="https://www.algolia.com/" target="_blank">
             <i class="iconfont icon-algolia" />

@@ -1,5 +1,5 @@
 ---
-title: 全部文章
+title: 모든 게시물
 aside: true
 ---
 

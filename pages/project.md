@@ -1,5 +1,5 @@
 ---
-title: 我的项目
+title: 내 프로젝트
 aside: false
 ---
 
@@ -9,4 +9,4 @@ import Project from "@/views/Project.vue"
 
 <Project />
 
-> 还没想好写点什么
+> 아직 뭘 써야할지 모르겠어요

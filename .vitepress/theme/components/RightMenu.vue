@@ -18,16 +18,16 @@
           @contextmenu.stop="closeRightMenu"
         >
           <div class="tools">
-            <div class="btn" title="后退" @click="rightMenuFunc('back')">
+            <div class="btn" title="뒤로 가기" @click="rightMenuFunc('back')">
               <i class="iconfont icon-left"></i>
             </div>
-            <div class="btn" title="前进" @click="rightMenuFunc('forward')">
+            <div class="btn" title="앞으로 가기" @click="rightMenuFunc('forward')">
               <i class="iconfont icon-right"></i>
             </div>
-            <div class="btn" title="刷新" @click="rightMenuFunc('reload')">
+            <div class="btn" title="새로고침" @click="rightMenuFunc('reload')">
               <i class="iconfont icon-refresh"></i>
             </div>
-            <div class="btn" title="返回顶部" @click="smoothScrolling">
+            <div class="btn" title="맨 위로 돌아가기" @click="smoothScrolling">
               <i class="iconfont icon-arrow-up"></i>
             </div>
           </div>
@@ -38,7 +38,7 @@
               @click="router.go(shufflePost(theme.postData))"
             >
               <i class="iconfont icon-shuffle"></i>
-              <span class="name">随便逛逛</span>
+              <span class="name">임의로 둘러보기</span>
             </div>
             <div
               v-if="clickedType === 'normal'"
@@ -46,16 +46,16 @@
               @click="router.go('/pages/categories')"
             >
               <i class="iconfont icon-folder"></i>
-              <span class="name">全部分类</span>
+              <span class="name">모든 카테고리</span>
             </div>
             <div v-if="clickedType === 'normal'" class="btn" @click="router.go('/pages/tags')">
               <i class="iconfont icon-hashtag"></i>
-              <span class="name">全部标签</span>
+              <span class="name">모든 태그</span>
             </div>
             <!-- 链接类型 -->
             <div v-if="clickedType === 'link'" class="btn" @click="rightMenuFunc('open-link')">
               <i class="iconfont icon-window"></i>
-              <span class="name">新标签页打开</span>
+              <span class="name">새 탭에서 열기</span>
             </div>
             <div
               v-if="clickedType === 'link'"
@@ -65,7 +65,7 @@
               "
             >
               <i class="iconfont icon-link"></i>
-              <span class="name">复制链接地址</span>
+              <span class="name">링크 주소 복사</span>
             </div>
             <!-- 图片类型 -->
             <div
@@ -74,7 +74,7 @@
               @click="copyImage(clickedTypeData?.src)"
             >
               <i class="iconfont icon-image-copy"></i>
-              <span class="name">复制此图片</span>
+              <span class="name">이 이미지 복사</span>
             </div>
             <div
               v-if="clickedType === 'image'"
@@ -82,7 +82,7 @@
               @click="downloadImage(clickedTypeData?.src)"
             >
               <i class="iconfont icon-download"></i>
-              <span class="name">下载此图片</span>
+              <span class="name">이 이미지 다운로드</span>
             </div>
             <!-- 输入框 -->
             <div
@@ -91,7 +91,7 @@
               @click="rightMenuFunc('input-paste')"
             >
               <i class="iconfont icon-paste"></i>
-              <span class="name">粘贴文本</span>
+              <span class="name">텍스트 붙여넣기</span>
             </div>
             <!-- 选中文本 -->
             <a
@@ -101,7 +101,7 @@
               target="_blank"
             >
               <i class="iconfont icon-link"></i>
-              <span class="name">在新标签页打开</span>
+              <span class="name">새 탭에서 열기</span>
             </a>
             <a
               v-if="clickedType === 'text' || clickedType === 'input'"
@@ -110,7 +110,7 @@
               target="_blank"
             >
               <i class="iconfont icon-baidu"></i>
-              <span class="name">使用百度搜索</span>
+              <span class="name">배민 검색 사용</span>
             </a>
             <a
               v-if="clickedType === 'text' || clickedType === 'input'"
@@ -119,7 +119,7 @@
               target="_blank"
             >
               <i class="iconfont icon-bing"></i>
-              <span class="name">使用必应搜索</span>
+              <span class="name">빙 검색 사용</span>
             </a>
             <div
               v-if="clickedType === 'text' || clickedType === 'input'"
@@ -127,7 +127,7 @@
               @click="copyText(clickedTypeData)"
             >
               <i class="iconfont icon-copy"></i>
-              <span class="name">复制选中文本</span>
+              <span class="name">선택한 텍스트 복사</span>
             </div>
             <div
               v-if="clickedType === 'text' && !commentCopyShow && theme.comment.type === 'artalk'"
@@ -135,7 +135,7 @@
               @click="commentCopy(clickedTypeData)"
             >
               <i class="iconfont icon-chat"></i>
-              <span class="name">评论选中内容</span>
+              <span class="name">선택한 텍스트 댓글</span>
             </div>
           </div>
           <!-- 通用菜单 -->
@@ -143,19 +143,19 @@
             <!-- 版权协议 -->
             <div class="btn" @click="router.go('/pages/cc')">
               <i class="iconfont icon-accessible"></i>
-              <span class="name">版权协议</span>
+              <span class="name">저작권 협약</span>
             </div>
             <!-- 隐私政策 -->
             <div class="btn" @click="router.go('/pages/privacy')">
               <i class="iconfont icon-privacy"></i>
-              <span class="name">隐私政策</span>
+              <span class="name">개인정보 보호 정책</span>
             </div>
           </div>
           <div class="all-menu general">
             <!-- 复制地址 -->
             <div class="btn" @click="rightMenuFunc('copy-link')">
               <i class="iconfont icon-copy"></i>
-              <span class="name">复制本页地址</span>
+              <span class="name">복사 페이지 주소</span>
             </div>
             <!-- 明暗模式 -->
             <div class="btn" @click.stop="store.changeThemeType">
@@ -164,7 +164,7 @@
               />
               <span class="name">
                 {{
-                  themeType === "auto" ? "深色模式" : themeType === "dark" ? "浅色模式" : "跟随系统"
+                  themeType === "auto" ? "어두운 모드" : themeType === "dark" ? "밝은 모드" : "시스템 따라가기"
                 }}
               </span>
             </div>
@@ -187,16 +187,16 @@
               />
             </div>
             <div class="control" @click.stop>
-              <div class="btn" title="上一曲" @click="playerControl('prev')">
+              <div class="btn" title="이전 곡" @click="playerControl('prev')">
                 <i class="iconfont icon-prev"></i>
               </div>
-              <div v-if="playState" class="btn" title="暂停" @click="playerControl('toggle')">
+              <div v-if="playState" class="btn" title="일시 정지" @click="playerControl('toggle')">
                 <i class="iconfont icon-pause"></i>
               </div>
-              <div v-else class="btn" title="播放" @click="playerControl('toggle')">
+              <div v-else class="btn" title="재생" @click="playerControl('toggle')">
                 <i class="iconfont icon-play"></i>
               </div>
-              <div class="btn" title="下一曲" @click="playerControl('next')">
+              <div class="btn" title="다음 곡" @click="playerControl('next')">
                 <i class="iconfont icon-next"></i>
               </div>
             </div>
@@ -207,12 +207,12 @@
     <!-- 快速评论 -->
     <Modal
       :show="commentCopyShow"
-      title="快速评论"
+      title="빠른 댓글"
       titleIcon="chat"
       @mask-click="commentCopyClose"
       @modal-close="commentCopyClose"
     >
-      <span class="modal-tip"> 您无需删除现有的输入框内容，直接在下方评论即可 </span>
+      <span class="modal-tip"> 기존 입력 필드 내용을 삭제하지 않고 바로 아래에 댓글을 작성하세요 </span>
       <Artalk :fill="commentCopyData" />
     </Modal>
   </Teleport>

@@ -1,5 +1,5 @@
 ---
-title: 全部标签
+title: 모든 태그
 aside: false
 ---
 

@@ -31,7 +31,7 @@
             <hr />
             <!-- 标签 -->
             <div class="tags-list menu-item">
-              <span class="link-title"> 标签</span>
+              <span class="link-title">태그</span>
               <div class="link-child">
                 <div
                   v-for="(item, tag, index) in tagsData"

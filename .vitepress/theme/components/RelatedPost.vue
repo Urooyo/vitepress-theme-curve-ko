@@ -4,9 +4,9 @@
     <div class="title">
       <span class="name">
         <i class="iconfont icon-star"></i>
-        相关推荐
+        관련 추천
       </span>
-      <span class="shuffle" @click="router.go(shufflePost(theme.postData))"> 随便逛逛 </span>
+      <span class="shuffle" @click="router.go(shufflePost(theme.postData))"> 임의로 둘러보기 </span>
     </div>
     <!-- 文章列表 -->
     <PostList :listData="relatedData" simple />

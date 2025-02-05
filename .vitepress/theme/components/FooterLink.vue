@@ -4,7 +4,7 @@
     <div v-if="showBar" class="footer-bar">
       <span class="site-title">{{ site.title }}</span>
       <span class="site-desc">{{ site.description }}</span>
-      <a href="/" class="to-home">了解更多</a>
+      <a href="/" class="to-home">더 알아보기</a>
     </div>
     <div class="footer-social">
       <a
@@ -16,7 +16,7 @@
       >
         <i :class="`iconfont icon-${item.icon}`"></i>
       </a>
-      <div class="logo" title="返回顶部" @click="smoothScrolling">
+      <div class="logo" title="상단으로 이동" @click="smoothScrolling">
         <img :src="siteMeta.author.cover" alt="author" class="author" />
       </div>
       <a

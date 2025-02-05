@@ -11,7 +11,7 @@ export default {
     Object.keys(categoriesData).forEach((key) => {
       pages.push({ params: { name: key.toString() } });
     });
-    console.info("分类动态路由：", pages);
+    console.info("카테고리 동적 라우팅：", pages);
     return pages;
   },
 };

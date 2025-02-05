@@ -12,7 +12,7 @@
       "
     >
       <i class="iconfont icon-page-right" />
-      <span class="page-text">上页</span>
+      <span class="page-text">이전 페이지</span>
     </div>
     <div class="page-number">
       <div
@@ -42,7 +42,7 @@
       class="page-item next"
       @click="jumpPage(`${routePath}/page/${currentPage + 1}`, currentPage + 1)"
     >
-      <span class="page-text">下页</span>
+      <span class="page-text">다음 페이지</span>
       <i class="iconfont icon-page-right" />
     </div>
   </div>

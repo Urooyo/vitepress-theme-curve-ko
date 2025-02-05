@@ -32,8 +32,8 @@ export const mainStore = defineStore("main", {
       playerShow: true,
       playerVolume: 0.7,
       playerData: {
-        name: "未知曲目",
-        artist: "未知艺术家",
+        name: "알 수 없는 곡",
+        artist: "알 수 없는 아티스트",
       },
       // 移动端菜单显示
       mobileMenuShow: false,
@@ -85,7 +85,7 @@ export const mainStore = defineStore("main", {
     changeThemeType() {
       // 禁止壁纸模式切换
       if (this.backgroundType === "image") {
-        $message.warning("无法在壁纸模式下切换明暗模式", {
+        $message.warning("배경 이미지 모드에서는 모드 변경을 할 수 없습니다", {
           duration: 1500,
         });
         return false;
@@ -99,11 +99,11 @@ export const mainStore = defineStore("main", {
       if (typeof $message !== "undefined") {
         const text =
           this.themeType === "light"
-            ? "浅色模式"
+            ? "밝은 모드"
             : this.themeType === "dark"
-              ? "深色模式"
-              : "跟随系统";
-        $message.info("当前主题为" + text, {
+              ? "어두운 모드"
+              : "시스템 따라가기";
+        $message.info("현재 테마는 " + text, {
           duration: 1500,
         });
       }

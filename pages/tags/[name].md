@@ -1,5 +1,5 @@
 ---
-title: 标签
+title: 태그
 aside: false
 padding: false
 ---
