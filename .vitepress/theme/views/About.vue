@@ -1,26 +1,26 @@
 <template>
   <div class="about">
-    <h1 class="title">关于本站</h1>
+    <h1 class="title">사이트 소개</h1>
     <div class="about-content" style="grid-template-columns: 3fr 2fr">
-      <!-- 介绍 -->
+      <!-- 소개 -->
       <div class="about-item hello">
-        <span class="text1">你好，很高兴认识你👋</span>
-        <span class="text2 title2">我是 無名</span>
-        <span class="text3">是一名 前端开发工程师、独立开发者、博主</span>
+        <span class="text1">안녕하세요, 만나서 반갑습니다👋</span>
+        <span class="text2 title2">저는 無名입니다</span>
+        <span class="text3">프론트엔드 개발자, 독립 개발자, 블로거입니다</span>
       </div>
-      <!-- 追求 -->
+      <!-- 추구 -->
       <div class="about-item pursuit">
-        <span class="tip">追求</span>
-        <span class="title2">源于</span>
-        <span class="title2">热爱而去开发</span>
-        <span class="title2">优秀的作品</span>
+        <span class="tip">추구</span>
+        <span class="title2">열정에서</span>
+        <span class="title2">시작된 개발로</span>
+        <span class="title2">훌륭한 작품을</span>
       </div>
     </div>
     <div class="about-content" style="grid-template-columns: 2fr 3fr">
-      <!-- 技能 -->
+      <!-- 기술 -->
       <div class="about-item skills">
-        <span class="tip">技能</span>
-        <span class="title2">开启创造力</span>
+        <span class="tip">기술</span>
+        <span class="title2">창의력 발휘</span>
         <div class="skills-list">
           <a
             v-for="(item, index) in skillsData"
@@ -37,15 +37,15 @@
           </a>
         </div>
       </div>
-      <!-- 生涯 -->
+      <!-- 경력 -->
       <div class="about-item career">
-        <span class="tip">生涯</span>
+        <span class="tip">경력</span>
         <span class="title2">
-          <i>無限進步</i>
+          <i>무한 발전</i>
         </span>
         <div class="list">
-          <span class="list-item" style="--color: #357ef5">ZZRVTC · 计算机应用技术</span>
-          <span class="list-item" style="--color: #eb372a">FE · 前端开发工程师</span>
+          <span class="list-item" style="--color: #357ef5">ZZRVTC · 컴퓨터 응용 기술</span>
+          <span class="list-item" style="--color: #eb372a">FE · 프론트엔드 개발자</span>
         </div>
         <img
           class="career-img"
@@ -55,18 +55,18 @@
       </div>
     </div>
     <div class="about-content" style="grid-template-columns: 3fr 2fr">
-      <!-- 性格 -->
+      <!-- 성격 -->
       <div class="about-item character" style="--color: #4298b4">
-        <span class="tip">性格</span>
-        <span class="title2">物流师</span>
+        <span class="tip">성격</span>
+        <span class="title2">물류사</span>
         <span class="title2" style="color: var(--color)">ISTJ-A / ISTJ-T</span>
         <span class="more">
-          在
           <a href="https://www.16personalities.com/ch/" target="_blank">16personalities</a>
-          了解更多关于
+          에서
           <a href="https://www.16personalities.com/ch/istj-%E4%BA%BA%E6%A0%BC" target="_blank">
-            物流师
+            물류사
           </a>
+          에 대해 더 알아보기
         </span>
         <img
           src="https://pic.efefee.cn/uploads/2024/02/22/65d6bc7ae72ae.png"
@@ -74,11 +74,11 @@
           class="male"
         />
       </div>
-      <!-- 座右铭 -->
+      <!-- 좌우명 -->
       <div class="about-item">
-        <span class="tip">座右铭</span>
-        <span class="title1" style="margin-top: 20px">脚踏实地，</span>
-        <span class="title2">一丝不苟。</span>
+        <span class="tip">좌우명</span>
+        <span class="title1" style="margin-top: 20px">발로 땅을 딛고,</span>
+        <span class="title2">한 치의 실수도 없이.</span>
       </div>
     </div>
     <div class="about-content" style="grid-template-columns: 1fr 1fr">
@@ -90,10 +90,10 @@
         "
       >
         <div class="image-content">
-          <span class="tip">关注偏好</span>
-          <span class="title2">数码科技</span>
+          <span class="tip">관심사</span>
+          <span class="title2">디지털 기술</span>
           <div class="image-desc">
-            <span class="left">手机、电脑及软硬件</span>
+            <span class="left">휴대폰, 컴퓨터 및 하드웨어/소프트웨어</span>
           </div>
         </div>
       </div>
@@ -105,16 +105,16 @@
         "
       >
         <div class="image-content">
-          <span class="tip">音乐偏好</span>
-          <span class="title2">欧美、华语流行、纯音乐、ACG</span>
+          <span class="tip">음악 취향</span>
+          <span class="title2">팝, 중국어 음악, 순수 음악, ACG</span>
           <div class="image-desc">
-            <span class="left">一起欣赏更多音乐</span>
+            <span class="left">함께 더 많은 음악을 감상해요</span>
           </div>
         </div>
       </div>
     </div>
     <div class="about-content" style="grid-template-columns: 2fr 3fr">
-      <!-- 数据 -->
+      <!-- 통계 -->
       <div
         class="about-item static image"
         style="
@@ -123,8 +123,8 @@
         "
       >
         <div class="image-content">
-          <span class="tip">数据</span>
-          <span class="title2">访问统计</span>
+          <span class="tip">통계</span>
+          <span class="title2">방문 통계</span>
           <div class="static-data">
             <div v-for="(item, key, index) in statisticsData" :key="index" class="static-item">
               <span class="static-name">{{ key }}</span>
@@ -133,44 +133,44 @@
           </div>
           <div class="image-desc opacity">
             <span class="left">
-              统计信息来自 <a href="https://v6.51.la/" target="_blank">51la</a>
+              통계 정보 제공: <a href="https://v6.51.la/" target="_blank">51la</a>
             </span>
           </div>
         </div>
       </div>
-      <!-- 信息 -->
+      <!-- 정보 -->
       <div class="about-item child">
         <div
           class="about-item map image"
           style="background-image: url(https://pic.efefee.cn/uploads/2024/04/15/661cbccc56af5.webp)"
         >
-          <span class="position">我现在住在 <strong>中国，河南省</strong></span>
+          <span class="position">현재 거주지 <strong>중국, 허난성</strong></span>
         </div>
         <div class="about-item info">
           <div class="info-item">
-            <span class="info-name">生于</span>
+            <span class="info-name">출생</span>
             <span class="info-num" style="--color: #43a6c6">2001</span>
           </div>
           <div class="info-item">
-            <span class="info-name">现在职业</span>
-            <span class="info-num" style="--color: #dfac46">前端开发工程师</span>
+            <span class="info-name">현재 직업</span>
+            <span class="info-num" style="--color: #dfac46">프론트엔드 개발자</span>
           </div>
         </div>
       </div>
     </div>
-    <!-- 心路历程 -->
+    <!-- 마음가짐 -->
     <div class="about-content" style="display: flex">
       <div class="about-item">
-        <span class="tip">心路历程</span>
-        <span class="title2">为什么建站？</span>
+        <span class="tip">마음가짐</span>
+        <span class="title2">왜 블로그를 만들었나요?</span>
         <p class="text">
-          创建这个站的时候，想要就是能够有一个自己能够<strong>积累知识</strong>、<strong>积累兴趣</strong>的地方。和他人分享，会让这些成为<strong>积累和沉淀</strong>。如果能够帮助到更多的人，帮助更多人解决问题，那一定是非常棒的事情。
+          이 사이트를 만들 때, <strong>지식을 쌓고</strong>, <strong>관심사를 발전시킬 수 있는</strong> 공간을 갖고 싶었습니다. 다른 사람들과 공유하면서 이것들이 <strong>축적되고 깊이를 더할 수 있습니다</strong>. 더 많은 사람들을 도울 수 있고, 더 많은 사람들의 문제를 해결할 수 있다면, 그것은 정말 멋진 일일 것입니다.
         </p>
         <p class="text">
-          这里大多都是<strong>技术向</strong>的文章，可能不太会有很多人看，权当是做个自我记录吧。当然，如果某篇文章能够帮助到你，那我也是很开心的。
+          여기에는 대부분 <strong>기술 관련</strong> 글들이 있어서 많은 사람들이 보지 않을 수도 있습니다. 자기 기록용이라고 생각하면 될 것 같네요. 물론, 어떤 글이 당신에게 도움이 된다면 저도 매우 기쁠 것입니다.
         </p>
         <p class="text">
-          这些就是创造这个小站的本意，<strong>也是我分享生活的方式</strong>。有幸能和你相遇在这里，相信我们能共同留下一段美好记忆。
+          이것이 이 작은 사이트를 만든 본래의 의도이며, <strong>또한 제가 삶을 공유하는 방식입니다</strong>. 여기서 당신과 만나게 되어 기쁘고, 우리가 함께 아름다운 추억을 만들 수 있을 것이라 믿습니다.
         </p>
       </div>
     </div>
